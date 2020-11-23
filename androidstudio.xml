@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <color name="colorPrimary">#00549F</color>
+    <color name="colorPrimaryDark">#003666</color>
+    <color name="colorAccent">#57AB27</color>
+    <color name="colorWhite">#FFFFFF</color>
+
+    <color name="colorRWTHBlau100">#00549F</color>
+    <color name="colorRWTHBlau75">#407FB7</color>
+    <color name="colorRWTHBlau50" tools:keep="@color/colorRWTHBlau50">#8EBAE5</color>
+    <color name="colorRWTHBlau25" tools:keep="@color/colorRWTHBlau25">#C7DDF2</color>
+    <color name="colorRWTHBlau10">#E8F1FA</color>
+
+    <color name="colorRWTHTuerkis100" tools:keep="@color/colorRWTHTuerkis100">#006165</color>
+    
+    <color name="colorRWTHRot100">#CC071E</color>
+    <color name="colorRWTHRot75" tools:keep="@color/colorRWTHRot75">#D85C41</color>
+    <color name="colorRWTHRot50" tools:keep="@color/colorRWTHRot50">#E69679</color>
+    <color name="colorRWTHRot25" tools:keep="@color/colorRWTHRot25">#F3CDBB</color>
+    <color name="colorRWTHRot10" tools:keep="@color/colorRWTHRot10">#FAEBE3</color>
+
+    <color name="colorRWTHGrün100">#57AB27</color>
+    <color name="colorRWTHGrün75" tools:keep="@color/colorRWTHGrün75">#8DC060</color>
+    <color name="colorRWTHGrün50" tools:keep="@color/colorRWTHGrün50">#B8D698</color>
+    <color name="colorRWTHGrün25" tools:keep="@color/colorRWTHGrün25">#DDEBCE</color>
+    <color name="colorRWTHGrün10" tools:keep="@color/colorRWTHGrün10">#F2F7EC</color>
+
+    <color name="colorRWTHOrange100">#F6A800</color>
+    <color name="colorRWTHOrange75" tools:keep="@color/colorRWTHOrange75">#FABE50</color>
+    <color name="colorRWTHOrange50" tools:keep="@color/colorRWTHOrange50">#FDD48F</color>
+    <color name="colorRWTHOrange25" tools:keep="@color/colorRWTHOrange25">#FFEAC9</color>
+    <color name="colorRWTHOrange10" tools:keep="@color/colorRWTHOrange10">#FFF7EA</color>
+
+    <color name="colorRWTHGelb100">#FFED00</color>
+    <color name="colorRWTHGelb75" tools:keep="@color/colorRWTHGelb75">#FFF055</color>
+    <color name="colorRWTHGelb50" tools:keep="@color/colorRWTHGelb50">#FFF59B</color>
+    <color name="colorRWTHGelb25" tools:keep="@color/colorRWTHGelb25">#FFFAD1</color>
+    <color name="colorRWTHGelb10" tools:keep="@color/colorRWTHGelb10">#FFFDEE</color>
+
+    <color name="colorRWTHSchwarz100">#000000</color>
+    <color name="colorRWTHSchwarz75" tools:keep="@color/colorRWTHSchwarz75">#646567</color>
+    <color name="colorRWTHSchwarz50" tools:keep="@color/colorRWTHSchwarz50">#9C9E9F</color>
+    <color name="colorRWTHSchwarz25" tools:keep="@color/colorRWTHSchwarz25">#CFD1D2</color>
+    <color name="colorRWTHSchwarz10" tools:keep="@color/colorRWTHSchwarz10">#ECEDED</color>
+</resources>
