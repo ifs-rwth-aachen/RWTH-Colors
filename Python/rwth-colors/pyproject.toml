@@ -1,0 +1,30 @@
+[tool.poetry]
+name = "RWTH Colors"
+version = "0.1.0"
+description = "Simple library that makes it easier to use RWTH CI colors in python projects"
+authors = ["Philipp Simon Leibner <philipp.leibner@ifs.rwth-aachen.de>"]
+license = "Apache-2.0"
+readme = "README.md"
+
+classifiers = [
+    "Topic :: Scientific/Engineering :: Information Analysis",
+    "Intended Audience :: Science/Research"
+]
+
+keywords = ["rwth", "aachen", "rwth aachen", "farbwelt"]
+
+include = [
+    "LICENSE",
+]
+
+
+[tool.poetry.dependencies]
+python = "^3.9"
+pytest = "^6.2.5"
+numpy = "^1.22.1"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
