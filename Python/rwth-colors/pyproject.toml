@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "RWTH Colors"
+name = "RWTHColors"
 version = "0.1.0"
 description = "Simple library that makes it easier to use RWTH CI colors in python projects"
 authors = ["Philipp Simon Leibner <philipp.leibner@ifs.rwth-aachen.de>"]
