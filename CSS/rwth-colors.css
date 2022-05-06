@@ -1,0 +1,79 @@
+:root {
+    --rwth-blau-100: #00549F;
+    --rwth-blau-75: #407FB7;
+    --rwth-blau-50: #8EBAE5;
+    --rwth-blau-25: #C7DDF2;
+    --rwth-blau-10: #E8F1FA;
+
+    --rwth-schwarz-100: #000000;
+    --rwth-schwarz-75: #646567;
+    --rwth-schwarz-50: #9C9E9F;
+    --rwth-schwarz-25: #CFD1D2;
+    --rwth-schwarz-10: #ECEDED;
+
+    --rwth-magenta-100: #E30066;
+    --rwth-magenta-75: #E96088;
+    --rwth-magenta-50: #F19EB1;
+    --rwth-magenta-25: #F9D2DA;
+    --rwth-magenta-10: #FDEEF0;
+
+    --rwth-gelb-100: #FFED00;
+    --rwth-gelb-75: #FFF055;
+    --rwth-gelb-50: #FFF59B;
+    --rwth-gelb-25: #FFFAD1;
+    --rwth-gelb-10: #FFFDEE;
+
+    --rwth-petrol-100: #006165;
+    --rwth-petrol-75: #2D7F83;
+    --rwth-petrol-50: #7DA4A7;
+    --rwth-petrol-25: #BFD0D1;
+    --rwth-petrol-10: #E6ECEC;
+
+    --rwth-tuerkis-100: #0098A1;
+    --rwth-tuerkis-75: #00B1B7;
+    --rwth-tuerkis-50: #89CCCF;
+    --rwth-tuerkis-25: #CAE7E7;
+    --rwth-tuerkis-10: #EBF6F6;
+
+    --rwth-gruen-100: #57AB27;
+    --rwth-gruen-75: #8DC060;
+    --rwth-gruen-50: #B8D698;
+    --rwth-gruen-25: #DDEBCE;
+    --rwth-gruen-10: #F2F7EC;
+
+    --rwth-maigruen-100: #BDCD00;
+    --rwth-maigruen-75: #D0D95C;
+    --rwth-maigruen-50: #E0E69A;
+    --rwth-maigruen-25: #F0F3D0;
+    --rwth-maigruen-10: #F9FAED;
+
+    --rwth-orange-100: #F6A800;
+    --rwth-orange-75: #FABE50;
+    --rwth-orange-50: #FDD48F;
+    --rwth-orange-25: #FEEAC9;
+    --rwth-orange-10: #FFF7EA;
+
+    --rwth-rot-100: #CC071E;
+    --rwth-rot-75: #D85C41;
+    --rwth-rot-50: #E69679;
+    --rwth-rot-25: #F3CDBB;
+    --rwth-rot-10: #FAEBE3;
+
+    --rwth-bordeaux-100: #A11035;
+    --rwth-bordeaux-75: #B65256;
+    --rwth-bordeaux-50: #CD8B87;
+    --rwth-bordeaux-25: #E5C5C0;
+    --rwth-bordeaux-10: #F5E8E5;
+
+    --rwth-violett-100: #612158;
+    --rwth-violett-75: #834E75;
+    --rwth-violett-50: #A8859E;
+    --rwth-violett-25: #D2C0CD;
+    --rwth-violett-10: #EDE5EA;
+
+    --rwth-lila-100: #7A6FAC;
+    --rwth-lila-75: #9B91C1;
+    --rwth-lila-50: #BCB5D7;
+    --rwth-lila-25: #DEDAEB;
+    --rwth-lila-10: #F2F0F7;
+}
