@@ -32,3 +32,6 @@ and then
 
 and the for example: `c=cm.RWTHSchwarz.p(75)` to get RWTH black 75 % version.
 The method call by default returns the HEX code of the color
+
+## Tip
+You can get even more beautiful plots if you rwthcolors together with the [SciencePlots](https://github.com/garrettj403/SciencePlots) python package
