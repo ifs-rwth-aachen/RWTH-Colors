@@ -3,6 +3,15 @@
 RWTH Color definitions in different formats.
 See [here](https://www9.rwth-aachen.de/global/show_document.asp?id=aaaaaaaaaadpbhq) for oringinal color defintions (German only)
 
+## Android Studio
+An XML file is available containing most RWTH colors
+
+## CSS
+.css file containing all RWTH Colors
+
+## LaTeX
+.tex file containing all RWTH Colors for use with the xcolor package
+
 ## Python Package
 To integrate RWTH's colors into your python application, you can use the rwthcolors package
 
