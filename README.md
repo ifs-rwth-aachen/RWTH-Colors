@@ -4,7 +4,7 @@ RWTH Color definitions in different formats.
 See [here](https://www9.rwth-aachen.de/global/show_document.asp?id=aaaaaaaaaadpbhq) for oringinal color defintions (German only)
 
 ## Android Studio
-An XML file is available containing most RWTH colors
+An XML file containing most RWTH colors
 
 ## CSS
 .css file containing all RWTH Colors
@@ -44,7 +44,7 @@ The method by default returns the HEX code of the color. If you need RGB codes, 
 a ColorManager using  ColorManager(frmt='RGB').
 
 ## Tip
-You can get even more beautiful plots if you rwthcolors together with the [SciencePlots](https://github.com/garrettj403/SciencePlots) python package.
+You can get even more beautiful plots if you use rwthcolors together with the [SciencePlots](https://github.com/garrettj403/SciencePlots) python package.
 Then you can use for example:
 
 `with plt.style.context(['science', 'grid', 'rwth']):
