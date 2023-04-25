@@ -5,23 +5,37 @@ from cycler import cycler
 
 
 class ColorManager:
+    RWTHBlau = RWTHBlau()
+    RWTHSchwarz = RWTHSchwarz()
+    RWTHMagenta = RWTHMagenta()
+    RWTHGelb = RWTHGelb()
+    RWTHPetrol = RWTHPetrol()
+    RWTHTuerkis = RWTHTuerkis()
+    RWTHGruen = RWTHGruen()
+    RWTHMaiGruen = RWTHMaiGruen()
+    RWTHOrange = RWTHOrange()
+    RWTHRot = RWTHRot()
+    RWTHBordeaux = RWTHBordeaux()
+    RWTHViolett = RWTHViolett()
+    RWTHLila = RWTHLila()
+
+    color_list = [RWTHBlau,
+                  RWTHPetrol,
+                  RWTHTuerkis,
+                  RWTHGruen,
+                  RWTHMaiGruen,
+                  RWTHOrange,
+                  RWTHRot,
+                  RWTHBordeaux,
+                  RWTHViolett,
+                  RWTHLila,
+                  RWTHSchwarz,
+                  RWTHMagenta,
+                  RWTHGelb]
+
     def __init__(self, frmt: str = "HEX", cycle='default'):
         if frmt not in ["HEX", "RGB"]:
             raise ValueError("frmt must be HEX or RGB not %s" % frmt)
-
-        self.RWTHBlau = RWTHBlau()
-        self.RWTHSchwarz = RWTHSchwarz()
-        self.RWTHMagenta = RWTHMagenta()
-        self.RWTHGelb = RWTHGelb()
-        self.RWTHPetrol = RWTHPetrol()
-        self.RWTHTuerkis = RWTHTuerkis()
-        self.RWTHGruen = RWTHGruen()
-        self.RWTHMaiGruen = RWTHMaiGruen()
-        self.RWTHOrange = RWTHOrange()
-        self.RWTHRot = RWTHRot()
-        self.RWTHBordeaux = RWTHBordeaux()
-        self.RWTHViolett = RWTHViolett()
-        self.RWTHLila = RWTHLila()
 
         self.rwth_color_cycle = cycler(color=[self.RWTHBlau.p(100),
                                               self.RWTHOrange.p(100),
@@ -120,3 +134,20 @@ class ColorManager:
         RWTHBordeaux.frmt = frmt
         RWTHViolett.frmt = frmt
         RWTHLila.frmt = frmt
+
+    @classmethod
+    def plot_color_palette(cls):
+        fig, ax = plt.subplots(1, 1, figsize=(5, 5), dpi=300)
+
+        for y, c in enumerate(ColorManager.color_list):
+            for x, shade in zip([1,2,3,4,5], [100, 75, 50, 25, 10]):
+                ax.scatter(x, y+1, c=c.p(shade), s=150)
+
+        ylabels = [c.__class__.__name__ for c in ColorManager.color_list]
+
+        ax.set_xticks([1, 2, 3, 4, 5], ["100 %", "75 %", "50 %", "25 %", "10 %"], rotation=45)
+        ax.set_yticks(list(range(1, 14)), ylabels, rotation=45)
+
+        plt.tight_layout()
+        return fig, ax
+

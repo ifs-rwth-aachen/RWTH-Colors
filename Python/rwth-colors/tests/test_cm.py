@@ -1,7 +1,7 @@
 
 from matplotlib import pyplot as plt
 
-#from RWTHColors import ColorManager as cm
+from RWTHColors import ColorManager as cm
 from RWTHColors.colors import RWTHRot
 
 
@@ -17,6 +17,14 @@ def test_color_manager():
     my_cm.frmt = "HEX"
 
     assert RWTHRot.HEX[100] == my_cm.RWTHRot.p(100)
+
+def test_plot_color_palette():
+    my_cm = cm()
+
+    fig, ax = cm.plot_color_palette()
+
+    plt.show()
+    fig.savefig('output/palette.png')
 
 def test_matplotlib_context():
     styles = plt.style.available

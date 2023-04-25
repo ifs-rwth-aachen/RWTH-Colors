@@ -43,6 +43,14 @@ and then for example: `c=cm.RWTHSchwarz.p(75)` to get RWTH black as 75 % version
 The method by default returns the HEX code of the color. If you need RGB codes, you can instantiate
 a ColorManager using  ColorManager(frmt='RGB').
 
+If instantiated, the ColorManager furthermore replaces matplotlibs default color cycle with the same cycle used in mplstlye `rwth`.
+
+## Color Palette
+`cm.plot_color_palette()` returns a figure showing all RWTH colors
+
+![Color Palette]("Python/rwth-colors/tests/output/palette.png")
+
+
 ## Tip
 You can get even more beautiful plots if you use rwthcolors together with the [SciencePlots](https://github.com/garrettj403/SciencePlots) python package.
 Then you can use for example:
