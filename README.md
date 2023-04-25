@@ -48,7 +48,7 @@ If instantiated, the ColorManager furthermore replaces matplotlibs default color
 ## Color Palette
 `cm.plot_color_palette()` returns a figure showing all RWTH colors
 
-![Color Palette]("Python/rwth-colors/tests/output/palette.png")
+![Color Palette](Python/rwth-colors/tests/output/palette.png)
 
 
 ## Tip
