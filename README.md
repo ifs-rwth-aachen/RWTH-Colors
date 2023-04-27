@@ -63,7 +63,7 @@ Then you can use for example:
 # Disclaimer
 
 This repository is not maintened by RWTH Aachen University's marketing department but a voluntary offer by the Institute of Rail Vehicles and Transport Systems.
-If you have the color definitions in other formats, feel free to contribute them using merge request.
+If you have the color definitions in other formats, feel free to contribute them using a merge request.
 
 <div>  
 <a href="">
