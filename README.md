@@ -1,4 +1,4 @@
-# RWTH Aachen University - Corportate Design Colors
+# RWTH Aachen University - Corporate Design Colors
 
 This repository contains RWTH Aachen University's corporate design color definitions in different formats.
 See [here](https://www9.rwth-aachen.de/global/show_document.asp?id=aaaaaaaaaadpbhq) for oringinal color defintions (German only)
