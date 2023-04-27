@@ -1,10 +1,11 @@
 [tool.poetry]
 name = "RWTHColors"
-version = "0.2.2"
+version = "0.2.3"
 description = "Simple library that makes it easier to use RWTH CI colors in python projects"
 authors = ["Philipp Simon Leibner <philipp.leibner@ifs.rwth-aachen.de>"]
 license = "Apache-2.0"
 readme = "README.md"
+repository = "https://github.com/ifs-rwth-aachen/RWTH-Colors"
 
 classifiers = [
     "Topic :: Scientific/Engineering :: Information Analysis",

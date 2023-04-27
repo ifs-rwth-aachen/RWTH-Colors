@@ -1,6 +1,6 @@
-# RWTH Colors
+# RWTH Aachen University - Corportate Design Colors
 
-RWTH Color definitions in different formats.
+This repository contains RWTH Aachen University's corporate design color definitions in different formats.
 See [here](https://www9.rwth-aachen.de/global/show_document.asp?id=aaaaaaaaaadpbhq) for oringinal color defintions (German only)
 
 ## Android Studio
@@ -59,3 +59,14 @@ Then you can use for example:
 	...
 `
 
+<!-- CONTACT -->
+# Disclaimer
+
+This repository is not maintened by RWTH Aachen University's marketing department but a voluntary offer by the Institute of Rail Vehicles and Transport Systems.
+If you have the color definitions in other formats, feel free to contribute them using merge request.
+
+<div>  
+<a href="">
+    <img src="http://www.ifs.rwth-aachen.de/fileadmin/images/rwth_ifs_de_rgb.png" alt="IFS Logo" width="400">
+  </a>
+</div>
