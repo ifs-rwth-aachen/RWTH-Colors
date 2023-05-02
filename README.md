@@ -59,6 +59,35 @@ Then you can use for example:
 	...
 `
 
+or another example:
+
+```
+import matplotlib.pyplot as plt
+import numpy as np
+import RWTHColors
+import scienceplots
+
+plt.style.use(['science', 'grid', 'rwth'])
+
+x = np.arange(0, 4*np.pi, .01)
+
+fig, ax = plt.subplots(1, 1, figsize=(10, 4))
+
+for a in [1,2,3,4,5,6,7,8]:
+    ax.plot(x, a*np.sin(x), label='$\hat{a}=$' + '${}$'.format(a))
+    
+ax.legend(loc=1)
+ax.set_xlabel('$x$')
+ax.set_ylabel('$f(x)$')
+
+plt.show()
+
+```
+
+which produces:
+
+![Example Plot](Python/rwth-colors/tests/output/plot.png)
+
 <!-- CONTACT -->
 # Disclaimer
 
