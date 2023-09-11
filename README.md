@@ -27,10 +27,8 @@ Simply import RWTHColors via :
 `import RWTHColors`
 
 Then you can use:
-`plt.style.use('rwth')` to get RWTH colors in your matplotlib plots
-
-Theres also style available called `rwth-full` containing a color cyle with more colors.
-
+`plt.style.use('rwth')` to get RWTH colors in your matplotlib plots. Theres also style available called `rwth-full` containing a color cyle with more colors.
+There als a style called `rwth-dark` that is intended to be used with dark backgrounds. E.g. using `with plt.style.context(['dark_background', 'rwth-dark']):..`
 If you want to access colors explictly you can also use
 
 `from RWTHColors import ColorManager`
