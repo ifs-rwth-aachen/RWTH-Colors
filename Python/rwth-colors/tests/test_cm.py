@@ -1,4 +1,4 @@
-
+import numpy as np
 from matplotlib import pyplot as plt
 
 from RWTHColors import ColorManager as cm
@@ -32,9 +32,10 @@ def test_matplotlib_context():
     with plt.style.context(['rwth']):
         fig1, ax = plt.subplots()
 
-        ax.plot([0, 1], [0, 1])
-        ax.plot([0, 2], [0, 1])
-        ax.plot([0, 3], [0, 1])
+        x = np.arange(0, 10, 0.1)
+
+        for i in range(10):
+            ax.plot(x, i * np.sin(x), label=str(i + 1))
 
 
     with plt.style.context(['rwth-full']):
@@ -43,6 +44,14 @@ def test_matplotlib_context():
         ax.plot([0, 1], [0, 1])
         ax.plot([0, 2], [0, 1])
         ax.plot([0, 3], [0, 1])
+
+    with plt.style.context(['dark_background', 'rwth-dark']):
+        fig3, ax = plt.subplots()
+
+        x = np.arange(0, 10, 0.1)
+
+        for i in range(10):
+            ax.plot(x, i * np.sin(x), label=str(i + 1))
 
     plt.show()
     pass
