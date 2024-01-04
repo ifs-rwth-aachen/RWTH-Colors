@@ -1,4 +1,5 @@
 import matplotlib.pyplot as plt
+from matplotlib.colors import LinearSegmentedColormap
 
 from RWTHColors.colors import *
 from cycler import cycler
@@ -34,8 +35,8 @@ class ColorManager:
                   RWTHGelb]
 
     def __init__(self, frmt: str = "HEX", cycle='default'):
-        if frmt not in ["HEX", "RGB"]:
-            raise ValueError("frmt must be HEX or RGB not %s" % frmt)
+        if frmt not in ["HEX", "RGB", "NRGB"]:
+            raise ValueError("frmt must be HEX, NRGB or RGB not %s" % frmt)
 
         self.rwth_color_cycle = cycler(color=[self.RWTHBlau.p(100),
                                               self.RWTHOrange.p(100),
@@ -110,14 +111,21 @@ class ColorManager:
 
         self.frmt = frmt
 
+        self.cmaps = {'rwth-viridis': LinearSegmentedColormap.from_list('rwth-viridis',
+                                                                        [(0, self.RWTHViolett.p(100, 'NRGB')),
+                                                                         (0.25, self.RWTHTuerkis.p(100, 'NRGB')),
+                                                                         (0.75, self.RWTHMaiGruen.p(100, 'NRGB')),
+                                                                         (1, self.RWTHGelb.p(100, 'NRGB'))],
+                                                                        N=256)}
+
     @property
     def frmt(self):
         return self._frmt
 
     @frmt.setter
     def frmt(self, frmt: str = "HEX"):
-        if frmt not in ["HEX", "RGB"]:
-            raise ValueError("frmt must be HEX or RGB not %s" % frmt)
+        if frmt not in ["HEX", "RGB", "NRGB"]:
+            raise ValueError("frmt must be HEX, NRGB or RGB not %s" % frmt)
 
         self._frmt = frmt
 
@@ -140,8 +148,8 @@ class ColorManager:
         fig, ax = plt.subplots(1, 1, figsize=(5, 5), dpi=300)
 
         for y, c in enumerate(ColorManager.color_list):
-            for x, shade in zip([1,2,3,4,5], [100, 75, 50, 25, 10]):
-                ax.scatter(x, y+1, c=c.p(shade), s=150)
+            for x, shade in zip([1, 2, 3, 4, 5], [100, 75, 50, 25, 10]):
+                ax.scatter(x, y + 1, c=c.p(shade), s=150)
 
         ylabels = [c.__class__.__name__ for c in ColorManager.color_list]
 
@@ -150,4 +158,3 @@ class ColorManager:
 
         plt.tight_layout()
         return fig, ax
-

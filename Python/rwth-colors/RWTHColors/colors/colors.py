@@ -5,8 +5,8 @@ class Color(ABC):
     frmt = "HEX"
 
     def __init__(self, frmt: str = "HEX"):
-        if frmt not in ["HEX", "RGB"]:
-            raise ValueError("frmt must be HEX or RGB not %s" % frmt)
+        if frmt not in ["HEX", "RGB", "NRGB"]:
+            raise ValueError("frmt must be HEX, NRGB or RGB not %s" % frmt)
 
         self.frmt = frmt
 
@@ -21,18 +21,26 @@ class Color(ABC):
         pass
 
     @classmethod
-    def power(cls, p: int = 100):
+    def power(cls, p: int = 100, frmt: str = None):
+        if not frmt:
+            frmt = cls.frmt
+
         if p not in [10, 25, 50, 75, 100]:
             raise ValueError("Power must be 10, 25, 50, 75 or 100 but not %d" % p)
 
-        if cls.frmt == "HEX":
+        if frmt == "HEX":
             return cls.HEX[p]
-        else:
+        elif frmt == "NRGB":
+            c = tuple(el / 255 for el in cls.RGB[p])
+            return c
+        elif frmt == "RGB":
             return cls.RGB[p]
+        else:
+            raise ValueError("Unsupported frmt %s" % frmt)
 
     @classmethod
-    def p(cls, p: int = 100):
-        return cls.power(p)
+    def p(cls, p: int = 100, frmt: str = None):
+        return cls.power(p, frmt)
 
 
 class RWTHBlau(Color):

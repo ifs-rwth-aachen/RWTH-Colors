@@ -1,5 +1,6 @@
 import numpy as np
 from matplotlib import pyplot as plt
+from matplotlib.colors import LinearSegmentedColormap
 
 from RWTHColors import ColorManager as cm
 from RWTHColors.colors import RWTHRot
@@ -52,6 +53,25 @@ def test_matplotlib_context():
 
         for i in range(10):
             ax.plot(x, i * np.sin(x), label=str(i + 1))
+
+    plt.show()
+    pass
+
+def test_normalized_rgb():
+    my_cm = cm(frmt='NRGB')
+
+    c = my_cm.RWTHBordeaux.p(100)
+    assert c == (0.6313725490196078, 0.06274509803921569, 0.20784313725490197)
+
+def test_cmaps():
+    my_cm = cm(frmt='NRGB')
+
+    x = np.arange(0, 100, 1)
+
+    fig, ax = plt.subplots(1, 1)
+
+    ax.scatter(x, x,    c=x, s=100, cmap='viridis')
+    ax.scatter(x+20, x, c=x, s=100, cmap=my_cm.cmaps['rwth-viridis'])
 
     plt.show()
     pass
