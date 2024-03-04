@@ -12,6 +12,9 @@ An XML file containing most RWTH colors
 ## LaTeX
 .tex file containing all RWTH Colors for use with the xcolor package
 
+## Draw.io
+A json file containing all RWTH Colors for use with draw.io
+
 ## Python Package
 To integrate RWTH's colors into your python application, you can use the rwthcolors package
 
