@@ -26,7 +26,9 @@ You can install rwthcolors via pip:
 Simply import RWTHColors via :
 `import RWTHColors`
 
-Then you can use:
+This automatically changes the default color cycle to RWTH colors.
+
+Alternatively, you can use:
 `plt.style.use('rwth')` to get RWTH colors in your matplotlib plots. Theres also style available called `rwth-full` containing a color cyle with more colors.
 There als a style called `rwth-dark` that is intended to be used with dark backgrounds. E.g. using `with plt.style.context(['dark_background', 'rwth-dark']):..`
 If you want to access colors explictly you can also use
@@ -41,7 +43,7 @@ and then for example: `c=cm.RWTHSchwarz.p(75)` to get RWTH black as 75 % version
 The method by default returns the HEX code of the color. If you need RGB codes, you can instantiate
 a ColorManager using  ColorManager(frmt='RGB').
 
-If instantiated, the ColorManager furthermore replaces matplotlibs default color cycle with the same cycle used in mplstlye `rwth`.
+If instantiated, the ColorManager also replaces matplotlibs default color cycle with the same cycle used in mplstlye `rwth`.
 
 ## Color Palette
 `cm.plot_color_palette()` returns a figure showing all RWTH colors
@@ -51,13 +53,13 @@ If instantiated, the ColorManager furthermore replaces matplotlibs default color
 
 ## Tip
 You can get even more beautiful plots if you use rwthcolors together with the [SciencePlots](https://github.com/garrettj403/SciencePlots) python package.
-Then you can use for example:
+Then you can use the following style combination for example and get beautiful scientific looking plots that utilize RWTH colors:
 
 `with plt.style.context(['science', 'grid', 'rwth']):
 	...
 `
 
-or another example:
+Another example:
 
 ```
 import matplotlib.pyplot as plt
@@ -89,7 +91,7 @@ which produces:
 <!-- CONTACT -->
 # Disclaimer
 
-This repository is not maintened by RWTH Aachen University's marketing department but a voluntary offer by the Institute of Rail Vehicles and Transport Systems.
+This repository is not maintained by RWTH Aachen University's marketing department but a voluntary offer by the Institute of Rail Vehicles and Transport Systems.
 If you have the color definitions in other formats, feel free to contribute them using a merge request.
 
 <div>  

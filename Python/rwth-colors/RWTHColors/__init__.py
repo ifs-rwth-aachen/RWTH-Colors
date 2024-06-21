@@ -25,3 +25,4 @@ for path in listdir(styles_path):
 # Update dictionary of styles
 plt.style.core.update_nested_dict(plt.style.library, stylesheets)
 plt.style.core.available[:] = sorted(plt.style.library.keys())
+plt.style.use(['rwth'])
