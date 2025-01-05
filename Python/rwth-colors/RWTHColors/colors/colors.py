@@ -42,6 +42,8 @@ class Color(ABC):
     def p(cls, p: int = 100, frmt: str = None):
         return cls.power(p, frmt)
 
+    def __call__(self, *args, **kwargs):
+        return self.power(*args, **kwargs)
 
 class RWTHBlau(Color):
     HEX = {100: '#00549F',
