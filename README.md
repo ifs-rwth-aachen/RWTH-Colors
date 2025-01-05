@@ -46,6 +46,8 @@ and then for example: `c=cm.RWTHSchwarz.p(75)` to get RWTH black as 75 % version
 The method by default returns the HEX code of the color. If you need RGB codes, you can instantiate
 a ColorManager using  ColorManager(frmt='RGB').
 
+Starting from version `0.2.8` you can also get the color by calling it directly, e.g.: `c=cm.RWTHBlau()` to get RWTHBlau 100 %. Use `c=cm.RWTHBlau(50)` to get RWTHBlau 50 %.
+
 If instantiated, the ColorManager also replaces matplotlibs default color cycle with the same cycle used in mplstlye `rwth`.
 
 ## Color Palette
