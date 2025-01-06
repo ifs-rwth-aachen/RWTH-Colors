@@ -26,53 +26,106 @@ You can install rwthcolors via pip:
 
 ### Usage
 
-Simply import RWTHColors via :
-`import RWTHColors`
+```markdown
+# RWTHColors Python Package
 
-This automatically changes the default color cycle to RWTH colors.
+## Overview
 
-Alternatively, you can use:
-`plt.style.use('rwth')` to get RWTH colors in your matplotlib plots. Theres also style available called `rwth-full` containing a color cyle with more colors.
-There als a style called `rwth-dark` that is intended to be used with dark backgrounds. E.g. using `with plt.style.context(['dark_background', 'rwth-dark']):..`
-If you want to access colors explictly you can also use
+The `rwthcolors` package allows you to integrate RWTH's official color palette into your Python applications, particularly for use with matplotlib.
 
-`from RWTHColors import ColorManager`
+## Installation
 
-and then instantiate a ColorManager using:
+Install `rwthcolors` via pip:
 
-`cm = ColorManager()`
+```bash
+pip install rwthcolors
+```
 
-and then for example: `c=cm.RWTHSchwarz.p(75)` to get RWTH black as 75 % version.
-The method by default returns the HEX code of the color. If you need RGB codes, you can instantiate
-a ColorManager using  ColorManager(frmt='RGB').
+## Usage
 
-Starting from version `0.2.8` you can also get the color by calling it directly, e.g.: `c=cm.RWTHBlau()` to get RWTHBlau 100 %. Use `c=cm.RWTHBlau(50)` to get RWTHBlau 50 %.
+### Importing RWTHColors
 
-Starting from version `0.2.9` you can also print the color values e.g. using: 
-```   
-print(RWTHRot.colors('RGB'))
+To automatically set the default color cycle to RWTH colors, simply import:
+
+```python
+import RWTHColors
+```
+This will make all matplotlib figures by default use RWTH colors!
+
+Alternatively, apply RWTH colors to your matplotlib plots using:
+
+```python
+plt.style.use('rwth')
+```
+
+Additional styles include:
+- **`rwth-full`**: A color cycle with more colors.
+- **`rwth-dark`**: For dark backgrounds. Use it with:
+  ```python
+  with plt.style.context(['dark_background', 'rwth-dark']):
+      # Your plotting code here
+  ```
+
+### Accessing Colors Explicitly
+
+To access colors explicitly, use `ColorManager`:
+
+```python
+from RWTHColors import ColorManager
+cm = ColorManager()
+```
+
+Example to get RWTH black at 75% intensity:
+
+```python
+c = cm.RWTHSchwarz.p(75)
+```
+
+By default, this returns the HEX code. For RGB codes, instantiate `ColorManager` with:
+
+```python
+cm = ColorManager(frmt='RGB')
+```
+
+Retrieve colors directly by calling them:
+
+```python
+c = cm.RWTHBlau()  # RWTHBlau at 100%
+c = cm.RWTHBlau(50)  # RWTHBlau at 50%
+```
+⚠️ **Warning:** RWTHColors only contains the official RWTH colors at 100 %, 75%, 50 %, 25 % and 10 %. It does not interpolate inbetween values.
+
+Print color values using:
+
+```python
+print(RWTHRot.colors('RGB')) # or
 print(RWTHRot())
 ```
 
-If instantiated, the ColorManager also replaces matplotlibs default color cycle with the same cycle used in mplstlye `rwth`.
+When instantiated, `ColorManager` replaces matplotlib's default color cycle with the cycle used in the `rwth` mplstyle.
 
 ## Color Palette
-`cm.plot_color_palette()` returns a figure showing all RWTH colors
+
+Display all RWTH colors with:
+
+```python
+cm.plot_color_palette()
+```
 
 ![Color Palette](Python/rwth-colors/tests/output/palette.png)
 
+## Tips for Enhanced Plots
 
-## Tip
-You can get even more beautiful plots if you use rwthcolors together with the [SciencePlots](https://github.com/garrettj403/SciencePlots) python package.
-Then you can use the following style combination for example and get beautiful scientific looking plots that utilize RWTH colors:
+Enhance your plots by combining `rwthcolors` with the [SciencePlots](https://github.com/garrettj403/SciencePlots) package. Example style combination:
 
-`with plt.style.context(['science', 'grid', 'rwth']):
-	...
-`
-
-Another example:
-
+```python
+with plt.style.context(['science', 'grid', 'rwth']):
+    # Your plotting code here
 ```
+
+### Example Plot
+
+```python
 import matplotlib.pyplot as plt
 import numpy as np
 import RWTHColors
@@ -84,7 +137,7 @@ x = np.arange(0, 4*np.pi, .01)
 
 fig, ax = plt.subplots(1, 1, figsize=(10, 4))
 
-for a in [1,2,3,4,5,6,7,8]:
+for a in [1, 2, 3, 4, 5, 6, 7, 8]:
     ax.plot(x, a*np.sin(x), label='$\hat{a}=$' + '${}$'.format(a))
     
 ax.legend(loc=1)
@@ -92,12 +145,12 @@ ax.set_xlabel('$x$')
 ax.set_ylabel('$f(x)$')
 
 plt.show()
-
 ```
 
-which produces:
+This produces:
 
 ![Example Plot](Python/rwth-colors/tests/output/plot.png)
+
 
 <!-- CONTACT -->
 # Disclaimer
@@ -110,3 +163,4 @@ If you have the color definitions in other formats, feel free to contribute them
     <img src="http://www.ifs.rwth-aachen.de/fileadmin/images/rwth_ifs_de_rgb.png" alt="IFS Logo" width="400">
   </a>
 </div>
+
