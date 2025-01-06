@@ -48,6 +48,12 @@ a ColorManager using  ColorManager(frmt='RGB').
 
 Starting from version `0.2.8` you can also get the color by calling it directly, e.g.: `c=cm.RWTHBlau()` to get RWTHBlau 100 %. Use `c=cm.RWTHBlau(50)` to get RWTHBlau 50 %.
 
+Starting from version `0.2.9` you can also print the color values e.g. using: 
+```   
+print(RWTHRot.colors('RGB'))
+print(RWTHRot())
+```
+
 If instantiated, the ColorManager also replaces matplotlibs default color cycle with the same cycle used in mplstlye `rwth`.
 
 ## Color Palette
