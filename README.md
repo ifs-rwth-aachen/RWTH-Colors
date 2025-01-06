@@ -16,24 +16,9 @@ An XML file containing most RWTH colors
 A json file containing all RWTH Colors for use with draw.io
 
 ## Python Package
-To integrate RWTH's colors into your python application, you can use the rwthcolors package
-
-### Installation
-
-You can install rwthcolors via pip:
-
-`pip install rwthcolors`
-
-### Usage
-
-```markdown
-# RWTHColors Python Package
-
-## Overview
-
 The `rwthcolors` package allows you to integrate RWTH's official color palette into your Python applications, particularly for use with matplotlib.
 
-## Installation
+### Installation
 
 Install `rwthcolors` via pip:
 
@@ -41,9 +26,9 @@ Install `rwthcolors` via pip:
 pip install rwthcolors
 ```
 
-## Usage
+### Usage
 
-### Importing RWTHColors
+#### Importing RWTHColors
 
 To automatically set the default color cycle to RWTH colors, simply import:
 
@@ -66,7 +51,7 @@ Additional styles include:
       # Your plotting code here
   ```
 
-### Accessing Colors Explicitly
+#### Accessing Colors Explicitly
 
 To access colors explicitly, use `ColorManager`:
 
@@ -104,7 +89,7 @@ print(RWTHRot())
 
 When instantiated, `ColorManager` replaces matplotlib's default color cycle with the cycle used in the `rwth` mplstyle.
 
-## Color Palette
+### Color Palette
 
 Display all RWTH colors with:
 
@@ -114,7 +99,7 @@ cm.plot_color_palette()
 
 ![Color Palette](Python/rwth-colors/tests/output/palette.png)
 
-## Tips for Enhanced Plots
+### Tips for Enhanced Plots
 
 Enhance your plots by combining `rwthcolors` with the [SciencePlots](https://github.com/garrettj403/SciencePlots) package. Example style combination:
 
@@ -123,7 +108,7 @@ with plt.style.context(['science', 'grid', 'rwth']):
     # Your plotting code here
 ```
 
-### Example Plot
+#### Example Plot
 
 ```python
 import matplotlib.pyplot as plt
