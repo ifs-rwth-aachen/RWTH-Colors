@@ -1,4 +1,5 @@
 from abc import ABC, abstractmethod
+from gc import is_finalized
 
 
 class Color(ABC):
@@ -42,8 +43,23 @@ class Color(ABC):
     def p(cls, p: int = 100, frmt: str = None):
         return cls.power(p, frmt)
 
+    @classmethod
+    def colors(cls, frmt: str = None):
+        if not frmt or frmt == 'HEX':
+            return cls.HEX
+        else:
+            return cls.RGB
+
     def __call__(self, *args, **kwargs):
         return self.power(*args, **kwargs)
+
+    def __repr__(self):
+        return f'<{self.__class__.__name__}({self.frmt})>'
+
+    def __str__(self):
+        return self.__class__.__name__ + ': ' + str(self.HEX) if self.frmt == "HEX" else str(self.RGB)
+
+
 
 class RWTHBlau(Color):
     HEX = {100: '#00549F',
