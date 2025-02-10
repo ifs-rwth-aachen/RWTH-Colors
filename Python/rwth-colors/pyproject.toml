@@ -3,7 +3,7 @@ name = "RWTHColors"
 version = "0.2.9"
 description = "Simple library that makes it easier to use RWTH CI colors in python projects"
 authors = ["Philipp Simon Leibner <philipp.leibner@ifs.rwth-aachen.de>"]
-license = "Apache-2.0"
+license = "MIT License"
 readme = "README.md"
 repository = "https://github.com/ifs-rwth-aachen/RWTH-Colors"
 
@@ -26,6 +26,9 @@ matplotlib = ">=3.5.3"
 cycler = ">=0.12.1"
 
 [tool.poetry.dev-dependencies]
+
+[tool.poetry.group.dev.dependencies]
+scienceplots = "^2.1.1"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]

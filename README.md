@@ -140,7 +140,7 @@ This produces:
 <!-- CONTACT -->
 # Disclaimer
 
-This repository is not maintained by RWTH Aachen University's marketing department but a voluntary offer by the Institute of Rail Vehicles and Transport Systems.
+This repository is not maintained by RWTH Aachen University's marketing department but a voluntary offer by the Institute of Rail Vehicles.
 If you have the color definitions in other formats, feel free to contribute them using a merge request.
 
 <div>  

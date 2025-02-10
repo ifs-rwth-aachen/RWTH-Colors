@@ -1,5 +1,6 @@
 import numpy as np
 import pytest
+import scienceplots
 from matplotlib import pyplot as plt
 
 from RWTHColors import ColorManager as cm
@@ -44,20 +45,48 @@ def test_matplotlib_context():
         for i in range(10):
             ax.plot(x, i * np.sin(x), label=str(i + 1))
 
-    with plt.style.context(["rwth-full"]):
-        fig2, ax = plt.subplots()
+        plt.suptitle('Suptitle')
+        ax.set_title('Axes Title')
+        ax.set_xlabel('x-Axis')
+        ax.set_ylabel('y-Axis')
 
-        ax.plot([0, 1], [0, 1])
-        ax.plot([0, 2], [0, 1])
-        ax.plot([0, 3], [0, 1])
-
-    with plt.style.context(["dark_background", "rwth-dark"]):
+    with plt.style.context(['science', 'grid', 'rwth', ]):
         fig3, ax = plt.subplots()
 
         x = np.arange(0, 10, 0.1)
 
         for i in range(10):
             ax.plot(x, i * np.sin(x), label=str(i + 1))
+
+        plt.suptitle('Suptitle')
+        ax.set_title('Axes Title')
+        ax.set_xlabel('x-Axis')
+        ax.set_ylabel('y-Axis')
+
+    with plt.style.context(["rwth-full"]):
+        fig4, ax = plt.subplots()
+
+        ax.plot([0, 1], [0, 1])
+        ax.plot([0, 2], [0, 1])
+        ax.plot([0, 3], [0, 1])
+
+        plt.suptitle('Suptitle')
+        ax.set_title('Axes Title')
+        ax.set_xlabel('x-Axis')
+        ax.set_ylabel('y-Axis')
+
+    with plt.style.context(["dark_background", "rwth-dark"]):
+        fig5, ax = plt.subplots()
+
+        x = np.arange(0, 10, 0.1)
+
+        for i in range(10):
+            ax.plot(x, i * np.sin(x), label=str(i + 1))
+
+        plt.suptitle('Suptitle')
+        ax.set_title('Axes Title')
+        ax.set_xlabel('x-Axis')
+        ax.set_ylabel('y-Axis')
 
     plt.show()
     pass

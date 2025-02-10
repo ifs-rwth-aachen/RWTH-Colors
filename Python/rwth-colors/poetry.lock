@@ -637,6 +637,20 @@ files = [
 six = ">=1.5"
 
 [[package]]
+name = "scienceplots"
+version = "2.1.1"
+description = "Format Matplotlib for scientific plotting"
+optional = false
+python-versions = "*"
+files = [
+    {file = "SciencePlots-2.1.1-py3-none-any.whl", hash = "sha256:2e64d2e93b4f98702f30145dbb70d238f5dc315e227fec331489631232dfc9e0"},
+    {file = "SciencePlots-2.1.1.tar.gz", hash = "sha256:d8d197e3410f87ebdad0b9c265eaab596094fb082d97123e835f6bc32800ab54"},
+]
+
+[package.dependencies]
+matplotlib = "*"
+
+[[package]]
 name = "six"
 version = "1.17.0"
 description = "Python 2 and 3 compatibility utilities"
@@ -710,4 +724,4 @@ type = ["pytest-mypy"]
 [metadata]
 lock-version = "2.0"
 python-versions = ">=3.9,<3.13"
-content-hash = "582ad288231e02c226daa7c493c6c2ffa72609974456f6b67a247f65a5349272"
+content-hash = "134dd54188231db200b3cfca46cd10b888710c0db36cc367f283063ed46bb6e0"
