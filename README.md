@@ -6,6 +6,9 @@ See [here](https://www9.rwth-aachen.de/global/show_document.asp?id=aaaaaaaaaadpb
 ## Android Studio
 An XML file containing most RWTH colors
 
+## Inkscape
+A `.gpl` file for Inkscape. Place in the palette folder of your Inkscape installation. You can find the location in the Inkscape settings under System.
+
 ## CSS
 .css file containing all RWTH Colors
 
