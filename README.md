@@ -139,6 +139,35 @@ This produces:
 
 ![Example Plot](Python/rwth-colors/tests/output/plot.png)
 
+### Vega-Altair plots
+RWTHColors also proveds themes for the plotting library [Vega-Altair](https://altair-viz.github.io/). To activate the themes inlclude the following before using altair:
+
+```python
+import altair as alt
+import RWTHColors.altair_theme
+
+alt.theme.enable("rwth") # or "rwth-full" or "rwth-dark"
+```
+
+The themes `rwth`, `rwth-full` and `rwth-dark`, analog to the matplotlib themes are available. Then you can craete plots as usual, e.g.,:
+
+```python
+import altair as alt
+import pandas as pd
+import RWTHColors.altair_theme
+
+alt.theme.enable("rwth") # or "rwth-full" or "rwth-dark"
+
+source = pd.DataFrame(
+{
+    "a": ["A", "B", "C", "D", "E", "F", "G", "H", "I"],
+    "b": [28, 55, 43, 91, 81, 53, 19, 87, 52],
+}
+)
+
+bar = alt.Chart(source).mark_bar(tooltip=True).encode(x="a:N", y="b:Q").properties(title='Bar Chart')
+
+```
 
 <!-- CONTACT -->
 # Disclaimer
