@@ -140,11 +140,11 @@ This produces:
 ![Example Plot](Python/rwth-colors/tests/output/plot.png)
 
 ### Vega-Altair plots
-RWTHColors also proveds themes for the plotting library [Vega-Altair](https://altair-viz.github.io/). To activate the themes inlclude the following before using altair:
+RWTHColors also provides themes for the plotting library [Vega-Altair](https://altair-viz.github.io/). To activate the themes inlclude the following before using altair:
 
 ```python
 import altair as alt
-import RWTHColors.altair_theme
+import RWTHColors
 
 alt.theme.enable("rwth") # or "rwth-full" or "rwth-dark"
 ```
@@ -154,7 +154,7 @@ The themes `rwth`, `rwth-full` and `rwth-dark`, analog to the matplotlib themes 
 ```python
 import altair as alt
 import pandas as pd
-import RWTHColors.altair_theme
+import RWTHColors
 
 alt.theme.enable("rwth") # or "rwth-full" or "rwth-dark"
 

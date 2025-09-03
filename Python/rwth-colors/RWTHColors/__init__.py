@@ -1,4 +1,5 @@
 from .cm import ColorManager
+import .altair_theme # type: ignore
 
 from os import listdir
 from os.path import isdir, join
