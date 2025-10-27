@@ -1,12 +1,11 @@
-from .cm import ColorManager
-import .altair_theme # type: ignore
-
 from os import listdir
 from os.path import isdir, join
 
 import matplotlib.pyplot as plt
 
 import RWTHColors
+from . import altair_theme
+from .cm import ColorManager
 
 # Similar to https://github.com/garrettj403/SciencePlots/blob/master/scienceplots/__init__.py
 # Register the included stylesheet in the matplotlib style library

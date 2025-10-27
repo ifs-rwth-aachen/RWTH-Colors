@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "RWTHColors"
-version = "0.2.9"
+version = "0.3.0"
 description = "Simple library that makes it easier to use RWTH CI colors in python projects"
 authors = ["Philipp Simon Leibner <philipp.leibner@ifs.rwth-aachen.de>"]
 license = "MIT License"
@@ -21,14 +21,19 @@ include = [
 
 [tool.poetry.dependencies]
 python = ">=3.9,<3.13"
-pytest = ">=7.4.2"
 matplotlib = ">=3.5.3"
 cycler = ">=0.12.1"
-
-[tool.poetry.dev-dependencies]
+scienceplots = { version = "^2.1.1", optional = true }
+altair = { version = "^5.5.0", optional = true }
+jupyter = { version = "^1.1.1", optional = true }
+pandas = { version = "^2.3.3", optional = true }
+vega-datasets = { version = "^0.9.0", optional = true }
 
 [tool.poetry.group.dev.dependencies]
-scienceplots = "^2.1.1"
+pytest = ">=7.4.2"
+
+[tool.poetry.extras]
+examples = ["jupyter", "altair", "scienceplots"]
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]

@@ -25,7 +25,7 @@ The `rwthcolors` package allows you to integrate RWTH's official color palette i
 
 Install `rwthcolors` via pip:
 
-```bash
+```zsh
 pip install rwthcolors
 ```
 
@@ -167,6 +167,13 @@ source = pd.DataFrame(
 
 bar = alt.Chart(source).mark_bar(tooltip=True).encode(x="a:N", y="b:Q").properties(title='Bar Chart')
 
+```
+
+## Examples
+In the `examples` folder you can find examples using RWTHColors.
+This requires additional dependencies that can be installed via
+```zsh
+pip install rwthcolors[examples]
 ```
 
 <!-- CONTACT -->
